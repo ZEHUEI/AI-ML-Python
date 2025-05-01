@@ -15,7 +15,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 df = pd.read_csv('40443486_features.csv')
-
 df['dummy_label'] = np.where(df['image_label'].isin(['a','j','sad','smiley','xclaim']), 1,0)
 
 features = df.select_dtypes(include=[np.number]).columns.tolist()  # Select all numeric columns
